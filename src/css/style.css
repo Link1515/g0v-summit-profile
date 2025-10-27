@@ -1,0 +1,4 @@
+@import 'tailwindcss';
+
+@source "../pug/**/*.pug";
+@source "../js/**/*.js";
