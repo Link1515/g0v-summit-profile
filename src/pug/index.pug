@@ -4,8 +4,37 @@ html(lang="zh-Hant-TW")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="/css/style.css?v=" + version)
-        title Document
-    body 
-        p.bg-red-200 hello world2
+        title Hi, 我是 Terry
+    body.min-h-screen.flex.justify-center.items-center
+        .p-4
+            h1(class="text-2xl md:text-center mb-4")
+                | Hi, 我是 Terry
 
-        script(src="/js/main.js?v=" + version)
+            div(class="mb-12 flex flex-col justify-center md:flex-row gap-4")
+                div
+                    h3.text-lg.mb-1 跟自己有關的「三個關鍵字」
+                    ul.list-disc.pl-6
+                        li 網站開發
+                        li 參與開源
+                        li 新北人
+                div
+                    h3.text-lg.mb-1 對籌備過程的「三個期待」
+                    ul.list-disc.pl-6
+                        li 了解 g0v 協作方式
+                        li 認識社群夥伴
+                        li 累積開發經驗
+                div 
+                    h3.text-lg.mb-1 對年會的「三個期待」
+                    ul.list-disc.pl-6
+                        li 了解公民駭客、公民科技
+                        li 了解外國實踐公民科技的案例
+                        li 成為 g0v 貢獻者
+            
+            h2.text-xl.text-center.mb-4.pb-2.border-b-1 作品集
+            div(class="max-w-[800px] mx-auto flex flex-col gap-6")
+                div
+                    a.inline-block.mb-2(href="#") 目前這個網站!
+                    p.text-justify 為了先熟悉 Gulp 與 Pug，我建立了一個以 Gulp + Pug 為基礎的專案環境，並加入 TailwindCSS 以符合目前 summit 的開發習慣。
+                div
+                    a.inline-block.mb-2(href="https://www.vtaiwan.tw/", target="_blank") vTaiwan 
+                    p.text-justify 曾參與 vTaiwan 專案的貢獻，主要負責修正 Android 手機瀏覽器的相容性問題以及部分樣式調整。

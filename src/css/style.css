@@ -2,3 +2,7 @@
 
 @source "../pug";
 @source "../js";
+
+a {
+  @apply text-blue-800 underline underline-offset-4 outline-none;
+}
