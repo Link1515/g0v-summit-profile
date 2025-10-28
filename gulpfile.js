@@ -11,7 +11,8 @@ const version = getTimestamp();
 function compilePug() {
   return src('src/pug/*.pug')
     .pipe(pug({ locals: { version } }))
-    .pipe(dest('dist'));
+    .pipe(dest('dist'))
+    .pipe(browserSync.stream());
 }
 
 function minifyCSS() {
@@ -34,7 +35,7 @@ function serve() {
       baseDir: 'dist'
     }
   });
-  watch('src/pug/**/*.pug', compilePug);
+  watch('src/pug/**/*.pug', series(minifyCSS, compilePug));
   watch('src/css/**/*.css', minifyCSS);
   watch('src/js/**/*.js', minifyJS);
 }

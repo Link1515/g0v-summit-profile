@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss" source("../");
 
-@source "../pug/**/*.pug";
-@source "../js/**/*.js";
+@source "../pug";
+@source "../js";
